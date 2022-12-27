@@ -9,36 +9,29 @@
 </template>
 
 <script>
-import CountBar from './components/CountBar.vue';
-import GoodsList from './components/GoodsList.vue';
-import Cart from './components/Cart.vue';
-import { mapState, mapMutations, mapGetters } from 'vuex';
+import CountBar from "./components/CountBar.vue";
+import GoodsList from "./components/GoodsList.vue";
+import Cart from "./components/Cart.vue";
+import { mapState, mapMutations, mapGetters } from "vuex";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
     CountBar,
     GoodsList,
-    Cart
+    Cart,
   },
-  data: function(){
-    return{
-      
-    }
+  data: function () {
+    return {};
   },
   methods: {
-    ...mapMutations(['addGood', 'clearCart'])
+    ...mapMutations(["addGood", "clearCart"]),
   },
-  computed:{
-    ...mapState([
-      'goods'
-    ]),
-    ...mapGetters([
-      'cartCount',
-      'cartList'
-    ])
-  }
-}
+  computed: {
+    ...mapState(["goods"]),
+    ...mapGetters(["cartCount", "cartList"]),
+  },
+};
 </script>
 
 <style>
@@ -57,7 +50,7 @@ export default {
   padding: 2%;
 }
 
-.box{
+.box {
   display: flex;
   width: 100%;
   position: relative;
